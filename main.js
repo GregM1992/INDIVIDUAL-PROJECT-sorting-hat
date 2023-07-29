@@ -3,7 +3,7 @@ const radiants = [
     id: 1,
     name: "Kaladin Stormblessed",
     order: "windrunner",
-    symbol: "images/windrunner.jpg",
+    symbol: "images/Windrunner.webp",
     spren: "honor",
     surges: ["adhesion", "gravitation"],
     corrupted: false
@@ -12,7 +12,7 @@ const radiants = [
     id: 2,
     name: "Shallan Davar",
     order: "lightweaver",
-    symbol: "images/windrunner.jpg",
+    symbol: "images/Lightweaver.webp",
     spren: "cryptic",
     surges: ["illumination", "transformation"],
     corrupted: false
@@ -21,7 +21,7 @@ const radiants = [
     id: 3,
     name: "Lift",
     order: "edgedancer",
-    symbol: "images/windrunner.jpg",
+    symbol: "images/Edgedancer.webp",
     spren: "cultivation",
     surges: ["abrasion", "progression"],
     corrupted: false
@@ -31,52 +31,52 @@ const radiantOrders = [
   {
   windrunners:{
     spren: "honor",
-    symbol: "tbd",
+    symbol: "images/Windrunner.webp",
     surges: ["adhesion", "gravitation"]
   },
   edgedancers:{
     spren: "cultivation",
-    symbol: "tbd",
+    symbol: "images/Edgedancer.webp",
     surges: ["abrasion", "progression"]
   },
   lightweavers:{
     spren: "cryptic",
-    symbol: "tbd",
+    symbol: "images/Lightweaver.webp",
     surges: ["illumination", "transformation"]
   },
   elsecallers:{
     spren: "ink",
-    symbol:"tbd",
+    symbol:"images/Elsecaller.webp",
     surges:["transformation","transportation"]
   },
   truthwatchers:{
     spren: "mist",
-    symbol:"tbd",
+    symbol:"images/Truthwatcher.webp",
     surges:["progression","illumination"]
   },
   willshapers:{
     spren: "light",
-    symbol:"tbd",
+    symbol:"images/Willshaper.webp",
     surges:["transportation","cohesion"]
   },
   stonewards:{
     spren: "peak",
-    symbol:"tbd",
+    symbol:"images/Stoneward.webp",
     surges:["cohesion","tension"]
   },
   bondsmiths:{
     spren: "unique",
-    symbol:"tbd",
+    symbol:"images/Bondsmith.webp",
     surges:["tension","adhesion"]
   },
   skybreakers:{
     spren: "high",
-    symbol:"tbd",
+    symbol:"images/Skybreaker.webp",
     surges:["gravitation","division"]
   },
   dustbringers:{
     spren: "ash",
-    symbol:"tbd",
+    symbol:"images/Dustbringer.webp",
     surges:["division","abrasion"]
   }
 }
