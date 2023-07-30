@@ -187,19 +187,26 @@ formModal()
 const filterBtns = () => {
   let domString = ''
   domString += `
-  <button type="button" class="btn btn-outline-primary">Windrunners</button>
-  <button type="button" class="btn btn-outline-secondary">Edgedancers</button>
-  <button type="button" class="btn btn-outline-success">Truthwatchers</button>
-  <button type="button" class="btn btn-outline-danger">Dustbringers</button>
-  <button type="button" class="btn btn-outline-warning">Bondsmiths</button>
-  <button type="button" class="btn btn-outline-info">Elsecallers</button>
-  <button type="button" class="btn btn-outline-light">Skybreakers</button>
-  <button type="button" class="btn btn-outline-dark">Stonewards</button>  
-  <button type="button" class="btn btn-outline-primary">Willshapers</button>
-  <button type="button" class="btn btn-outline-danger">Lightweavers</button>
-  <button type="button" class="btn btn-primary">All Radiants</button>
-  <button type="button" class="btn btn-danger">Corrupted</button>
+  <button type="button" id="windrunners" class="btn btn-outline-primary">Windrunners</button>
+  <button type="button" id="edgedancers" class="btn btn-outline-secondary">Edgedancers</button>
+  <button type="button" id="truthwatchers" class="btn btn-outline-success">Truthwatchers</button>
+  <button type="button" id="dustbringers" class="btn btn-outline-danger">Dustbringers</button>
+  <button type="button" id="bondsmiths" class="btn btn-outline-warning">Bondsmiths</button>
+  <button type="button" id="elsecallers" class="btn btn-outline-info">Elsecallers</button>
+  <button type="button" id="skybreakers" class="btn btn-outline-light">Skybreakers</button>
+  <button type="button" id="stonewards" class="btn btn-outline-dark">Stonewards</button>  
+  <button type="button" id="willshapers" class="btn btn-outline-primary">Willshapers</button>
+  <button type="button" id="lightweavers" class="btn btn-outline-danger">Lightweavers</button>
+  <button type="button" id="all-radiants" class="btn btn-primary">All Radiants</button>
+  <button type="button" id="corrupted" class="btn btn-danger">Corrupted</button>
   `
   renderToDom('#btn-container', domString)
 }
 filterBtns()
+
+//       EVENT LISTENERS
+document.querySelector('#btn-container').addEventListener ('click', (event) => {
+  if (event.target.id === 'all-radiants'){
+    console.log('you clicked!')
+  }  
+})
