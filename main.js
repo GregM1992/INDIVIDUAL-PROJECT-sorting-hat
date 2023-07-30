@@ -187,18 +187,17 @@ formModal()
 const filterBtns = () => {
   let domString = ''
   domString += `
-  <button type="button" id="windrunners" class="btn btn-outline-primary">Windrunners</button>
-  <button type="button" id="edgedancers" class="btn btn-outline-secondary">Edgedancers</button>
-  <button type="button" id="truthwatchers" class="btn btn-outline-success">Truthwatchers</button>
-  <button type="button" id="dustbringers" class="btn btn-outline-danger">Dustbringers</button>
-  <button type="button" id="bondsmiths" class="btn btn-outline-warning">Bondsmiths</button>
-  <button type="button" id="elsecallers" class="btn btn-outline-info">Elsecallers</button>
-  <button type="button" id="skybreakers" class="btn btn-outline-light">Skybreakers</button>
-  <button type="button" id="stonewards" class="btn btn-outline-dark">Stonewards</button>  
-  <button type="button" id="willshapers" class="btn btn-outline-primary">Willshapers</button>
-  <button type="button" id="lightweavers" class="btn btn-outline-danger">Lightweavers</button>
+  <button type="button" id="windrunner" class="btn btn-outline-primary">Windrunners</button>
+  <button type="button" id="edgedancer" class="btn btn-outline-secondary">Edgedancers</button>
+  <button type="button" id="truthwatcher" class="btn btn-outline-success">Truthwatchers</button>
+  <button type="button" id="dustbringer" class="btn btn-outline-danger">Dustbringers</button>
+  <button type="button" id="bondsmith" class="btn btn-outline-warning">Bondsmiths</button>
+  <button type="button" id="elsecaller" class="btn btn-outline-info">Elsecallers</button>
+  <button type="button" id="skybreaker" class="btn btn-outline-light">Skybreakers</button>
+  <button type="button" id="stoneward" class="btn btn-outline-dark">Stonewards</button>  
+  <button type="button" id="willshaper" class="btn btn-outline-primary">Willshapers</button>
+  <button type="button" id="lightweaver" class="btn btn-outline-danger">Lightweavers</button>
   <button type="button" id="all-radiants" class="btn btn-primary">All Radiants</button>
-  <button type="button" id="corrupted" class="btn btn-danger">Corrupted</button>
   `
   renderToDom('#btn-container', domString)
 }
@@ -207,6 +206,36 @@ filterBtns()
 //       EVENT LISTENERS
 document.querySelector('#btn-container').addEventListener ('click', (event) => {
   if (event.target.id === 'all-radiants'){
-    console.log('you clicked!')
-  }  
+    knightsOnDom(radiants)
+  } else if (event.target.id === 'elsecaller'){
+    const elseArr = radiants.filter(oath => oath.order === 'elsecaller')
+    knightsOnDom(elseArr)
+  } else if (event.target.id === 'dustbringer'){
+    const dustArr = radiants.filter(oath => oath.order === 'dustbringer')
+    knightsOnDom(dustArr)
+  } else if (event.target.id === 'bondsmith'){
+    const bondArr = radiants.filter(oath => oath.order === 'bondsmith')
+    knightsOnDom(bondArr)
+  } else if (event.target.id === 'truthwatcher'){
+    const truthArr = radiants.filter(oath => oath.order === 'truthwatcher')
+    knightsOnDom(truthArr)
+  }else if (event.target.id === 'skybreaker'){
+    const skyArr = radiants.filter(oath => oath.order === 'skybreaker')
+    knightsOnDom(skyArr)
+  }else if (event.target.id === 'lightweaver'){
+    const lightArr = radiants.filter(oath => oath.order === 'lightweaver')
+    knightsOnDom(lightArr)
+  }else if (event.target.id === 'stoneward'){
+    const stoneArr = radiants.filter(oath => oath.order === 'stoneward')
+    knightsOnDom(stoneArr)
+  }else if (event.target.id === 'willshaper'){
+    const willArr = radiants.filter(oath => oath.order === 'willshaper')
+    knightsOnDom(willArr)
+  }else if (event.target.id === 'edgedancer'){
+    const edgeArr = radiants.filter(oath => oath.order === 'edgedancer')
+    knightsOnDom(edgeArr)
+  }else if (event.target.id === 'windrunner'){
+    const windrunnerArr = radiants.filter(oath => oath.order === 'windrunner')
+    knightsOnDom(windrunnerArr)
+  }
 })
