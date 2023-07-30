@@ -25,6 +25,42 @@ const radiants = [
     spren: "cultivation",
     surges: ["abrasion", "progression"],
     corrupted: false
+  },
+  {
+    id: 4,
+    name: "Teft ",
+    order: "windrunner",
+    symbol: "images/Windrunner.webp",
+    spren: "honor",
+    surges: ["adhesion", "gravitation"],
+    corrupted: false
+  },
+  {
+    id: 5,
+    name: "Rock numuhukumakiaki'aialunamor",
+    order: "windrunner",
+    symbol: "images/Windrunner.webp",
+    spren: "honor",
+    surges: ["adhesion", "gravitation"],
+    corrupted: false
+  },
+  {
+    id: 6,
+    name: "Cephandrius Hoid",
+    order: "lightweaver",
+    symbol: "images/Lightweaver.webp",
+    spren: "cryptic",
+    surges: ["illumination", "transformation"],
+    corrupted: false
+  },
+  {
+    id:7,
+    name: "Renarin Kholin",
+    order: "truthwatcher",
+    symbol: "images/Truthwatcher.webp",
+    spren: "mist",
+    surges: ["progression","illumination"],
+    corrupted: true
   }
 ]
 const radiantOrders = [
@@ -146,3 +182,24 @@ const formModal = () =>{
   renderToDom("#formContainer", domString)
 }
 formModal()
+
+//      FILTER BUTTONS
+const filterBtns = () => {
+  let domString = ''
+  domString += `
+  <button type="button" class="btn btn-outline-primary">Windrunners</button>
+  <button type="button" class="btn btn-outline-secondary">Edgedancers</button>
+  <button type="button" class="btn btn-outline-success">Truthwatchers</button>
+  <button type="button" class="btn btn-outline-danger">Dustbringers</button>
+  <button type="button" class="btn btn-outline-warning">Bondsmiths</button>
+  <button type="button" class="btn btn-outline-info">Elsecallers</button>
+  <button type="button" class="btn btn-outline-light">Skybreakers</button>
+  <button type="button" class="btn btn-outline-dark">Stonewards</button>  
+  <button type="button" class="btn btn-outline-primary">Willshapers</button>
+  <button type="button" class="btn btn-outline-danger">Lightweavers</button>
+  <button type="button" class="btn btn-primary">All Radiants</button>
+  <button type="button" class="btn btn-danger">Corrupted</button>
+  `
+  renderToDom('#btn-container', domString)
+}
+filterBtns()
