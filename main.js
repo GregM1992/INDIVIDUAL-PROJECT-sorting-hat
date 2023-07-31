@@ -153,7 +153,7 @@ const knightsOnDom = (array) => {
       <p class="card-text">${squire.name}</p>
       <p class="card-text">${squire.order}</p>
       <p class="card-text">${squire.surges}</p>
-      <button type="button" id="break-oath-btn--${radiants.id}" class="btn btn-warning">BREAK OATH</button>
+      <button type="button" id="break-oath-btn--${squire.id}" class="btn btn-warning">BREAK OATH</button>
     </div>
     </div>
     `
@@ -292,8 +292,10 @@ document.getElementById("take-oath-btn").addEventListener('click',(event) => {
 })
 
 
-document.getElementById("break-oath-btn").addEventListener('click'),(event) =>{
-  if (event.target.id.includes('break')){
+document.querySelector(".btn-warning").addEventListener('click',(event) => {
+if (event.target.id.includes('break-oath-btn')){
+const [, int] = event.target.id.split('--')
+const cardIndex = radiants.findIndex((squire) => squire.id === Number(int))
 
-  }
-}
+ }
+})
