@@ -129,17 +129,13 @@ const radiants = [
   }
 ]
 
-
+const corrupted = [{}]
 //  UTILITY FUNCTIONS
 
 const renderToDom = (divId, html) => {
   const targetedDiv = document.querySelector(divId);
   targetedDiv.innerHTML = html;
 }
-//          adds property to object
-// radiantOrders[0].dustbringers.name = "greg"
-// console.log(radiantOrders[0].dustbringers)
-
 
 
 
@@ -157,14 +153,36 @@ const knightsOnDom = (array) => {
       <p class="card-text">${squire.name}</p>
       <p class="card-text">${squire.order}</p>
       <p class="card-text">${squire.surges}</p>
-      <button type="button" class="btn btn-warning">BREAK OATH</button>
+      <button type="button" id="break-oath-btn--${radiants.id}" class="btn btn-warning">BREAK OATH</button>
     </div>
     </div>
     `
   }
   renderToDom('#orderContainer', domString)
 }
+
+
 knightsOnDom(radiants)
+
+
+//   CORRUPT ON DOM FUNCTION 
+
+const corruptOnDom = (array) => {
+  for (squire of array){
+    let domString = ''
+    domString+=  `
+    <div class="card" style="width: 18rem;">
+    <img src=${squire.symbol} class="card-img-top" alt="the symbol of the knights radiant">
+      <div class="card-body">
+        <p class="card-text">${squire.name}</p>
+        <p class="card-text">Is there a path to redemption?</p>
+      </div>
+    </div>
+    `
+  }
+  renderToDom('#corruptedContainer', domString)
+}
+
 
 //        SHOW FORM 
 const formModal = () =>{
@@ -261,6 +279,7 @@ document.getElementById("take-oath-btn").addEventListener('click',(event) => {
   const randomIndex = Math.floor(Math.random() * radiantOrders.length)
 
   const newRadiant = {
+    id: radiantOrders.length + 1,
     name: document.getElementById("new-radiant-name").value,
     order: radiantOrders[randomIndex].order,
     spren: radiantOrders[randomIndex].spren,
@@ -271,3 +290,10 @@ document.getElementById("take-oath-btn").addEventListener('click',(event) => {
   knightsOnDom(radiants);
   document.getElementById("new-radiant-name").value = ''
 })
+
+
+document.getElementById("break-oath-btn").addEventListener('click'),(event) =>{
+  if (event.target.id.includes('break')){
+
+  }
+}
