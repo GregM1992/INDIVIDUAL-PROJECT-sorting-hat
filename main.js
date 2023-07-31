@@ -1,133 +1,133 @@
-const radiantOrders = [
-  {
-  windrunners:{
-    order: "windrunner",
-    spren: "honor",
+const radiantOrders = [ 
+   {
+    order: "Windrunner",
+    spren: "Honor",
     symbol: "images/Windrunner.webp",
-    surges: ["adhesion", "gravitation"]
-  },
-  edgedancers:{
-    order: "edgedancer",
-    spren: "cultivation",
+    surges: ["Adhesion", " Gravitation"]
+   },
+   {
+    order: "Edgedancer",
+    spren: "Cultivation",
     symbol: "images/Edgedancer.webp",
-    surges: ["abrasion", "progression"]
-  },
-  lightweavers:{
-    order: "lightweaver",
-    spren: "cryptic",
+    surges: ["Abrasion", " Progression"]
+   },
+   {
+    order: "Lightweaver",
+    spren: "Cryptic",
     symbol: "images/Lightweaver.webp",
-    surges: ["illumination", "transformation"]
-  },
-  elsecallers:{
-    order :"elsecaller",
-    spren: "ink",
+    surges: ["Illumination", "Transformation"]
+   },
+   {
+    order :"Elsecaller",
+    spren: "Ink",
     symbol:"images/Elsecaller.webp",
-    surges:["transformation","transportation"]
-  },
-  truthwatchers:{
-    order: "truthwatcher",
-    spren: "mist",
+    surges:["Transformation"," Transportation"]
+   },
+   {
+    order: "Truthwatcher",
+    spren: "Mist",
     symbol:"images/Truthwatcher.webp",
-    surges:["progression","illumination"]
-  },
-  willshapers:{
-    order: "willshaper",
-    spren: "light",
+    surges:["Progression"," Illumination"]
+   },
+   {
+    order: "Tillshaper",
+    spren: "Light",
     symbol:"images/Willshaper.webp",
-    surges:["transportation","cohesion"]
-  },
-  stonewards:{
-    order: "stoneward",
-    spren: "peak",
+    surges:["Transportation"," Cohesion"]
+   },
+   {
+    order: "Stoneward",
+    spren: "Peak",
     symbol:"images/Stoneward.webp",
-    surges:["cohesion","tension"]
-  },
-  bondsmiths:{
-    order: "bondsmith",
-    spren: "unique",
+    surges:["Cohesion"," Tension"]
+   },
+   {
+    order: "Bondsmith",
+    spren: "Unique",
     symbol:"images/Bondsmith.webp",
-    surges:["tension","adhesion"]
-  },
-  skybreakers:{
-    order: "skybreaker",
-    spren: "high",
+    surges:["Tension","Adhesion"]
+   },
+   {
+    order: "Skybreaker",
+    spren: "High",
     symbol:"images/Skybreaker.webp",
-    surges:["gravitation","division"]
-  },
-  dustbringers:{
-    order: "dustbringer",
-    spren: "ash",
+    surges:["Gravitation"," Division"]
+   },
+   {
+    order: "Dustbringer",
+    spren: "Ash",
     symbol:"images/Dustbringer.webp",
-    surges:["division","abrasion"]
-  }
-}
-]
+    surges:["Division"," Abrasion"]
+   }
+  ]
+
+
+
 const radiants = [
   {
     id: 1,
     name: "Kaladin Stormblessed",
-    order: radiantOrders[0].windrunners.order,
-    symbol: radiantOrders[0].windrunners.symbol,
-    spren: radiantOrders[0].windrunners.spren,
-    surges: radiantOrders[0].windrunners.surges,
+    order: radiantOrders[0].order,
+    symbol: radiantOrders[0].symbol,
+    spren: radiantOrders[0].spren,
+    surges: radiantOrders[0].surges,
     corrupted: false
   },
   {
     id: 2,
     name: "Shallan Davar",
-    order: radiantOrders[0].lightweavers.order,
-    symbol: radiantOrders[0].lightweavers.symbol,
-    spren: radiantOrders[0].lightweavers.spren,
-    surges: radiantOrders[0].lightweavers.surges,
+    order: radiantOrders[2].order,
+    symbol: radiantOrders[2].symbol,
+    spren: radiantOrders[2].spren,
+    surges: radiantOrders[2].surges,
     corrupted: false
   },
   {
     id: 3,
     name: "Lift",
-    order: radiantOrders[0].edgedancers.order,
-    symbol: radiantOrders[0].edgedancers.symbol,
-    spren: radiantOrders[0].edgedancers.spren,
-    surges: radiantOrders[0].edgedancers.surges,
+    order: radiantOrders[1].order,
+    symbol: radiantOrders[1].symbol,
+    spren: radiantOrders[1].spren,
+    surges: radiantOrders[1].surges,
     corrupted: false
   },
   {
     id: 4,
     name: "Teft ",
-    order: radiantOrders[0].windrunners.order,
-    symbol: radiantOrders[0].windrunners.symbol,
-    spren: radiantOrders[0].windrunners.spren,
-    surges: radiantOrders[0].windrunners.surges,
+    order: radiantOrders[0].order,
+    symbol: radiantOrders[0].symbol,
+    spren: radiantOrders[0].spren,
+    surges: radiantOrders[0].surges,
     corrupted: false
   },
   {
     id: 5,
-    name: "Rock numuhukumakiaki'aialunamor",
-    order: radiantOrders[0].windrunners.order,
-    symbol: radiantOrders[0].windrunners.symbol,
-    spren: radiantOrders[0].windrunners.spren,
-    surges: radiantOrders[0].windrunners.surges,
+    name: "Rock Numuhukumakiaki'aialunamor",
+    order: radiantOrders[0].order,
+    symbol: radiantOrders[0].symbol,
+    spren: radiantOrders[0].spren,
+    surges: radiantOrders[0].surges,
     corrupted: false
   },
   {
     id: 6,
     name: "Cephandrius Hoid",
-    order: radiantOrders[0].lightweavers.order,
-    symbol: radiantOrders[0].lightweavers.symbol,
-    spren: radiantOrders[0].lightweavers.spren,
-    surges: radiantOrders[0].lightweavers.surges,
+    order: radiantOrders[2].order,
+    symbol: radiantOrders[2].symbol,
+    spren: radiantOrders[2].spren,
+    surges: radiantOrders[2].surges,
     corrupted: false
   },
   {
     id:7,
     name: "Renarin Kholin",
-    order: radiantOrders[0].truthwatchers.order,
-    symbol: radiantOrders[0].truthwatchers.symbol,
-    spren: radiantOrders[0].truthwatchers.spren,
-    surges: radiantOrders[0].truthwatchers.surges,
+    order: radiantOrders[4].order,
+    symbol: radiantOrders[4].symbol,
+    spren: radiantOrders[4].spren,
+    surges: radiantOrders[4].surges,
     corrupted: true
   }
 ]
-
 
 
 //  UTILITY FUNCTIONS
@@ -136,6 +136,11 @@ const renderToDom = (divId, html) => {
   const targetedDiv = document.querySelector(divId);
   targetedDiv.innerHTML = html;
 }
+//          adds property to object
+// radiantOrders[0].dustbringers.name = "greg"
+// console.log(radiantOrders[0].dustbringers)
+
+
 
 
 
@@ -179,10 +184,10 @@ const formModal = () =>{
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <input class="form-control" type="text" placeholder="NAME" aria-label="default input example">
+      <input class="form-control" id="new-radiant-name" type="text" placeholder="NAME" aria-label="default input example">
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">THESE WORDS ARE ACCEPTED!</button>
+        <button type="submit" class="btn btn-primary" id="take-oath-btn" data-bs-dismiss="modal">THESE WORDS ARE ACCEPTED!</button>
       </div>
     </div>
   </div>
@@ -217,34 +222,52 @@ document.querySelector('#btn-container').addEventListener ('click', (event) => {
   if (event.target.id === 'all-radiants'){
     knightsOnDom(radiants)
   } else if (event.target.id === 'elsecaller'){
-    const elseArr = radiants.filter(oath => oath.order === 'elsecaller')
+    const elseArr = radiants.filter(oath => oath.order === 'Elsecaller')
     knightsOnDom(elseArr)
   } else if (event.target.id === 'dustbringer'){
-    const dustArr = radiants.filter(oath => oath.order === 'dustbringer')
+    const dustArr = radiants.filter(oath => oath.order === 'Dustbringer')
     knightsOnDom(dustArr)
   } else if (event.target.id === 'bondsmith'){
-    const bondArr = radiants.filter(oath => oath.order === 'bondsmith')
+    const bondArr = radiants.filter(oath => oath.order === 'Bondsmith')
     knightsOnDom(bondArr)
   } else if (event.target.id === 'truthwatcher'){
-    const truthArr = radiants.filter(oath => oath.order === 'truthwatcher')
+    const truthArr = radiants.filter(oath => oath.order === 'Truthwatcher')
     knightsOnDom(truthArr)
   }else if (event.target.id === 'skybreaker'){
-    const skyArr = radiants.filter(oath => oath.order === 'skybreaker')
+    const skyArr = radiants.filter(oath => oath.order === 'Skybreaker')
     knightsOnDom(skyArr)
   }else if (event.target.id === 'lightweaver'){
-    const lightArr = radiants.filter(oath => oath.order === 'lightweaver')
+    const lightArr = radiants.filter(oath => oath.order === 'Lightweaver')
     knightsOnDom(lightArr)
   }else if (event.target.id === 'stoneward'){
-    const stoneArr = radiants.filter(oath => oath.order === 'stoneward')
+    const stoneArr = radiants.filter(oath => oath.order === 'Stoneward')
     knightsOnDom(stoneArr)
   }else if (event.target.id === 'willshaper'){
-    const willArr = radiants.filter(oath => oath.order === 'willshaper')
+    const willArr = radiants.filter(oath => oath.order === 'Willshaper')
     knightsOnDom(willArr)
   }else if (event.target.id === 'edgedancer'){
-    const edgeArr = radiants.filter(oath => oath.order === 'edgedancer')
+    const edgeArr = radiants.filter(oath => oath.order === 'Edgedancer')
     knightsOnDom(edgeArr)
   }else if (event.target.id === 'windrunner'){
-    const windrunnerArr = radiants.filter(oath => oath.order === 'windrunner')
+    const windrunnerArr = radiants.filter(oath => oath.order === 'Windrunner')
     knightsOnDom(windrunnerArr)
   }
+})
+
+
+document.getElementById("take-oath-btn").addEventListener('click',(event) => {
+   event.preventDefault()
+
+  const randomIndex = Math.floor(Math.random() * radiantOrders.length)
+
+  const newRadiant = {
+    name: document.getElementById("new-radiant-name").value,
+    order: radiantOrders[randomIndex].order,
+    spren: radiantOrders[randomIndex].spren,
+    symbol:radiantOrders[randomIndex].symbol,
+    surges:radiantOrders[randomIndex].surges
+  };
+  radiants.push(newRadiant);
+  knightsOnDom(radiants);
+  document.getElementById("new-radiant-name").value = ''
 })
