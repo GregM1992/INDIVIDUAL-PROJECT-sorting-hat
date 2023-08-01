@@ -70,8 +70,7 @@ const radiants = [
     order: radiantOrders[0].order,
     symbol: radiantOrders[0].symbol,
     spren: radiantOrders[0].spren,
-    surges: radiantOrders[0].surges,
-    corrupted: false
+    surges: radiantOrders[0].surges,  
   },
   {
     id: 2,
@@ -79,8 +78,7 @@ const radiants = [
     order: radiantOrders[2].order,
     symbol: radiantOrders[2].symbol,
     spren: radiantOrders[2].spren,
-    surges: radiantOrders[2].surges,
-    corrupted: false
+    surges: radiantOrders[2].surges, 
   },
   {
     id: 3,
@@ -88,8 +86,7 @@ const radiants = [
     order: radiantOrders[1].order,
     symbol: radiantOrders[1].symbol,
     spren: radiantOrders[1].spren,
-    surges: radiantOrders[1].surges,
-    corrupted: false
+    surges: radiantOrders[1].surges,  
   },
   {
     id: 4,
@@ -97,8 +94,7 @@ const radiants = [
     order: radiantOrders[0].order,
     symbol: radiantOrders[0].symbol,
     spren: radiantOrders[0].spren,
-    surges: radiantOrders[0].surges,
-    corrupted: false
+    surges: radiantOrders[0].surges,  
   },
   {
     id: 5,
@@ -106,8 +102,7 @@ const radiants = [
     order: radiantOrders[0].order,
     symbol: radiantOrders[0].symbol,
     spren: radiantOrders[0].spren,
-    surges: radiantOrders[0].surges,
-    corrupted: false
+    surges: radiantOrders[0].surges,   
   },
   {
     id: 6,
@@ -115,8 +110,7 @@ const radiants = [
     order: radiantOrders[2].order,
     symbol: radiantOrders[2].symbol,
     spren: radiantOrders[2].spren,
-    surges: radiantOrders[2].surges,
-    corrupted: false
+    surges: radiantOrders[2].surges,  
   },
   {
     id:7,
@@ -125,11 +119,10 @@ const radiants = [
     symbol: radiantOrders[4].symbol,
     spren: radiantOrders[4].spren,
     surges: radiantOrders[4].surges,
-    corrupted: true
   }
 ]
 
-const corrupted = [{}]
+const corrupted = []
 //  UTILITY FUNCTIONS
 
 const renderToDom = (divId, html) => {
@@ -168,9 +161,9 @@ knightsOnDom(radiants)
 //   CORRUPT ON DOM FUNCTION 
 
 const corruptOnDom = (array) => {
-  for (squire of array){
-    let domString = ''
-    domString+=  `
+  let domString = ''
+  for (const squire of array){
+    domString +=  `
     <div class="card" style="width: 18rem;">
     <img src=${squire.symbol} class="card-img-top" alt="the symbol of the knights radiant">
       <div class="card-body">
@@ -292,10 +285,18 @@ document.getElementById("take-oath-btn").addEventListener('click',(event) => {
 })
 
 
-document.querySelector(".btn-warning").addEventListener('click',(event) => {
+document.querySelector("#sorted").addEventListener('click',(event) => {
 if (event.target.id.includes('break-oath-btn')){
-const [, int] = event.target.id.split('--')
-const cardIndex = radiants.findIndex((squire) => squire.id === Number(int))
+const [, int] = event.target.id.split('--');
 
+const breakIndex = radiants.findIndex((squire)=> squire.id === Number(int));
+
+let corruptedRadiant = radiants.splice(breakIndex, 1)[0];
+
+corrupted.push(corruptedRadiant);
+
+corruptOnDom(corrupted);
+
+knightsOnDom(radiants);
  }
 })
