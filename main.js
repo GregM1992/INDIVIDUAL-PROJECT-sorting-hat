@@ -187,22 +187,22 @@ const formModal = () =>{
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Take the first steps towards radiance!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body"> 
-      <input class="form-control" id="new-radiant-name" placeholder= "Name" type="text" required>
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-primary" id="take-oath-btn" data-bs-dismiss="modal">THESE WORDS ARE ACCEPTED!</button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Take the first steps towards radiance!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form>
+            <input class="form-control" id="new-radiant-name" placeholder="Name" type="text" required/>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" id="take-oath-btn">THESE WORDS ARE ACCEPTED!</button>
+        </div>
+        </form>
       </div>
     </div>
   </div>
-</div>
   `                  
   renderToDom("#formContainer", domString)
 }
@@ -265,8 +265,11 @@ document.querySelector('#btn-container').addEventListener ('click', (event) => {
   }
 })
 
+const fModal = new bootstrap.Modal(document.querySelector('#exampleModal'))
 
-document.getElementById("take-oath-btn").addEventListener('click',(event) => {
+const form = document.querySelector('form')
+
+form.addEventListener('submit',(event) => {
    event.preventDefault()
 
   const randomIndex = Math.floor(Math.random() * radiantOrders.length)
@@ -281,7 +284,8 @@ document.getElementById("take-oath-btn").addEventListener('click',(event) => {
   };
   radiants.push(newRadiant);
   knightsOnDom(radiants);
-  document.getElementById("new-radiant-name").value = ''
+  form.reset()
+  fModal.hide()
 })
 
 
