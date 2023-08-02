@@ -2,61 +2,61 @@ const radiantOrders = [
    {
     order: "Windrunner",
     spren: "Honor",
-    symbol: "images/Windrunner.webp",
+    symbol: "vimages/Jeseh_glyph.svg",
     surges: ["Adhesion", " Gravitation"]
    },
    {
     order: "Edgedancer",
     spren: "Cultivation",
-    symbol: "images/Edgedancer.webp",
+    symbol: "vimages/Edgedancers_glyph.svg",
     surges: ["Abrasion", " Progression"]
    },
    {
     order: "Lightweaver",
     spren: "Cryptic",
-    symbol: "images/Lightweaver.webp",
+    symbol: "vimages/Shash_glyph.svg",
     surges: ["Illumination", "Transformation"]
    },
    {
     order :"Elsecaller",
     spren: "Ink",
-    symbol:"images/Elsecaller.webp",
+    symbol:"vimages/Beteb_glyph.svg",
     surges:["Transformation"," Transportation"]
    },
    {
     order: "Truthwatcher",
     spren: "Mist",
-    symbol:"images/Truthwatcher.webp",
+    symbol:"vimages/Truthwatchers_glyph.svg",
     surges:["Progression"," Illumination"]
    },
    {
-    order: "Tillshaper",
+    order: "Willshaper",
     spren: "Light",
-    symbol:"images/Willshaper.webp",
+    symbol:"vimages/Willshapers_glyph.svg",
     surges:["Transportation"," Cohesion"]
    },
    {
     order: "Stoneward",
     spren: "Peak",
-    symbol:"images/Stoneward.webp",
+    symbol:"vimages/Stonewards_glyph.svg",
     surges:["Cohesion"," Tension"]
    },
    {
     order: "Bondsmith",
     spren: "Unique",
-    symbol:"images/Bondsmith.webp",
+    symbol:"vimages/File_Ishi_glyph.svg",
     surges:["Tension","Adhesion"]
    },
    {
     order: "Skybreaker",
     spren: "High",
-    symbol:"images/Skybreaker.webp",
+    symbol:"vimages/Skybreakers_glyph.svg",
     surges:["Gravitation"," Division"]
    },
    {
     order: "Dustbringer",
     spren: "Ash",
-    symbol:"images/Dustbringer.webp",
+    symbol:"vimages/Dustbringers_glyph.svg",
     surges:["Division"," Abrasion"]
    }
   ]
@@ -98,7 +98,7 @@ const radiants = [
   },
   {
     id: 5,
-    name: "Rock Numuhukumakiaki'aialunamor",
+    name: "Rock",
     order: radiantOrders[0].order,
     symbol: radiantOrders[0].symbol,
     spren: radiantOrders[0].spren,
@@ -194,8 +194,8 @@ const formModal = () =>{
         <h5 class="modal-title" id="exampleModalLabel">Take the first steps towards radiance!</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-      <input class="form-control" id="new-radiant-name" type="text" placeholder="NAME" aria-label="default input example">
+      <div class="modal-body"> 
+      <input class="form-control" id="new-radiant-name" placeholder= "Name" type="text" required>
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-primary" id="take-oath-btn" data-bs-dismiss="modal">THESE WORDS ARE ACCEPTED!</button>
@@ -203,7 +203,7 @@ const formModal = () =>{
     </div>
   </div>
 </div>
-  `
+  `                  
   renderToDom("#formContainer", domString)
 }
 formModal()
