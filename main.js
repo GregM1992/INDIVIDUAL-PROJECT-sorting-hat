@@ -15,7 +15,7 @@ const radiantOrders = [
     order: "Lightweaver",
     spren: "Cryptic",
     symbol: "vimages/Shash_glyph.svg",
-    surges: ["Illumination", "Transformation"]
+    surges: ["Illumination", " Transformation"]
    },
    {
     order :"Elsecaller",
@@ -44,8 +44,8 @@ const radiantOrders = [
    {
     order: "Bondsmith",
     spren: "Unique",
-    symbol:"vimages/File_Ishi_glyph.svg",
-    surges:["Tension","Adhesion"]
+    symbol:"vimages/Ishi_glyph.svg",
+    surges:["Tension"," Adhesion"]
    },
    {
     order: "Skybreaker",
@@ -144,8 +144,8 @@ const knightsOnDom = (array) => {
     <img src=${squire.symbol} class="card-img-top" alt="the symbol of the knights radiant">
     <div class="card-body">
       <p class="card-text">${squire.name}</p>
-      <p class="card-text">${squire.order}</p>
-      <p class="card-text">${squire.surges}</p>
+      <p class="card-text"> ${squire.order}</p>
+      <p class="card-text"> ${squire.surges}</p>
       <button type="button" id="break-oath-btn--${squire.id}" class="btn btn-warning">BREAK OATH</button>
     </div>
     </div>
@@ -155,7 +155,7 @@ const knightsOnDom = (array) => {
 }
 
 
-knightsOnDom(radiants)
+
 
 
 //   CORRUPT ON DOM FUNCTION 
@@ -206,7 +206,7 @@ const formModal = () =>{
   `                  
   renderToDom("#formContainer", domString)
 }
-formModal()
+
 
 //      FILTER BUTTONS
 const filterBtns = () => {
@@ -222,13 +222,16 @@ const filterBtns = () => {
   <button type="button" id="stoneward" class="btn btn-outline-dark">Stonewards</button>  
   <button type="button" id="willshaper" class="btn btn-outline-primary">Willshapers</button>
   <button type="button" id="lightweaver" class="btn btn-outline-danger">Lightweavers</button>
-  <button type="button" id="all-radiants" class="btn btn-primary">All Radiants</button>
+  <button type="button" id="all-radiants" class="btn btn-outline-light">All Radiants</button>
   `
   renderToDom('#btn-container', domString)
 }
-filterBtns()
+
 
 //       EVENT LISTENERS
+
+
+const eventListeners = () => {
 document.querySelector('#btn-container').addEventListener ('click', (event) => {
   if (event.target.id === 'all-radiants'){
     knightsOnDom(radiants)
@@ -304,3 +307,14 @@ corruptOnDom(corrupted);
 knightsOnDom(radiants);
  }
 })
+}
+
+
+const startApp = () =>{
+  formModal();
+  filterBtns();
+  knightsOnDom(radiants)
+  eventListeners()
+}
+
+startApp()
