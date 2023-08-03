@@ -8,28 +8,41 @@ body{
   margin:40px 40px;
   text-shadow: 0 0 4px rgb(2, 9, 37)
  }
- h2{
+h2{
   font-style: italic;
   font-size: larger;
   text-shadow: 0 0 4px rgb(2, 9, 37);
  }
- h1, h2{
+h1, h2{
   text-align: center;
   color: goldenrod;
  }
+
 #sorted{
   display: flex;
   flex-basis: 4;
 }
+
 #btn-container{
-  display: grid;
-  width: auto;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100px;
+  filter: drop-shadow(0 0 2px rgb(3, 3, 0));
+  margin: 2px;
 }
+
+#btn-container > .btn{
+  margin: 5px;
+  text-shadow: black;
+}
+
 #formContainer{
   display: flex;
   justify-content: center;
+  margin: 25px;
 }
+
 #orderContainer{
   display: flex;
   flex-wrap: wrap;
@@ -37,6 +50,7 @@ body{
   width: 50%;
   margin: 30px;
 }
+
 #corruptedContainer{
   display: flex;
   flex-wrap: wrap;
@@ -45,22 +59,48 @@ body{
   flex-grow: 1;
 }
 #corruptedContainer >.card{
-  background-color: purple ;
+  background-image: url(vimages/corrupted.webp);
+  box-shadow: 0 0 8px 8px rgb(0, 0, 0) inset;
+  color: black;
+}
+
+#corruptedContainer > .card >img{
+  filter: invert(1);
+  filter: drop-shadow(0 0 5px rgb(16, 0, 44)); 
 }
 .card{
   text-align: center;
-  height: 485px ;
+  font-weight: bold;
+  color: azure;
+  text-shadow: 0 0 3px black;
+  height: 300px ;
   justify-content: space-around;
   border-radius: 50px;
+  margin: 0 20px 40px 0;
+  background: none;
+  border: none;
+  padding-left: none;
+  padding-right: none;
 }
-.card-img-top{
-  border-radius: 50px;
+
+#orderContainer > .card > img{
+  filter: drop-shadow(0 0 14px rgb(255, 255, 223)); 
+}
+
+.btn-warning{
+  width: 140px;
+  margin: auto;
+  margin-top: 0;
+  border-radius: 25px;
 }
 .card-body{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  height: 180px;
+  padding: 5px;
 }
+
 img{
-  height: 250px;
+  height: 150px;
+  width: 150px;
 }
