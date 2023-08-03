@@ -64,7 +64,7 @@ h1, h2{
   color: black;
 }
 
-#corruptedContainer > .card >img{
+#corruptedContainer > .card > img{
   filter: invert(1);
   filter: drop-shadow(0 0 5px rgb(16, 0, 44)); 
 }
